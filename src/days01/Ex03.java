@@ -16,7 +16,9 @@ public class Ex03 {
 		// 변수 선언 형식
 		// 타입(자료형) 변수명;
 		// 식별자 
-		String name="오승종";
+		// 대입연산자 : 좌측기억공간 = 우측 항값;
+		String name;
+		name="오승종";
 		System.out.println(name);
 	}//main
 
