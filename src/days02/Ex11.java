@@ -27,9 +27,10 @@ public class Ex11 {
 //		if(gender==false) {
 //			str_gender="여자";
 //		}else str_gender="남자"; 
-		System.out.println("이름은 \""+name+"\"이고, 나이는 "+age+"살이고, 성별은 "+/*str_*/gender+"입니다");
+		//System.out.println("이름은 \""+name+"\"이고, 나이는 "+age+"살이고, 성별은 "+/*str_*/gender+"입니다");
 		
-		
+		//원하는 출력형식으로 출력할 때 println 대신 printf
+		System.out.printf("이름은 \"%s\"이고, 나이는 %d살이고, 성별은 %3$b(%3$B)입니다",name,age,gender);
 		
 	}
 
