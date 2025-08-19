@@ -10,6 +10,12 @@ public class Ex05 {
 
 	public static void main(String[] args) {
 
+		float var1=0.1234567890123456789f;
+		double var2=0.1234567890123456789;
+		System.out.println("var1"+var1);
+		System.out.println("var2"+var2);
+		
+		System.out.println("-".repeat(50)); //구분선
 		/*
 		 * 3.14 double
 		 * 3. double
