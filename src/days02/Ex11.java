@@ -23,7 +23,11 @@ public class Ex11 {
 		
 		System.out.print("3. 성별 입력 : ");
 		gender=Boolean.parseBoolean(br.readLine());
-		
+//		String str_gender;
+//		if(gender==false) {
+//			str_gender="여자";
+//		}else str_gender="남자"; 
+		//걍해봄
 		System.out.println("이름은 \""+name+"\"이고, 나이는 "+age+"살이고, 성별은 "+gender+"입니다");
 		
 		
