@@ -18,7 +18,7 @@ package days02;
                         char(2)
                         
                 실수계열 – float(4), double(8)
-        	ㄴ 논리형 – true/false          boolean(1)
+        	ㄴ 논리형 – true/false -> boolean(1)
     	참조형(Reference Type)  - 배열, 클래스(String), 인터페이스
  * */
 public class Ex01 {
