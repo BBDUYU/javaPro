@@ -43,17 +43,15 @@ public class Ex01_03 {
 		Scanner scanner=new Scanner(System.in);
 		
 		//이름
-		System.out.print(" > 이름 입력: ");
+	    System.out.print("  > 이름 국어 영어 수학 입력: ");
+
 		name=scanner.next();
 		//국
-		System.out.print(" > 국어 입력: ");
 		kor=Byte.parseByte(scanner.next()); 
 
 		//영
-		System.out.print(" > 영어 입력: ");
 		eng=Byte.parseByte(scanner.next());
 		//수
-		System.out.print(" > 수학 입력: ");
 		math=Byte.parseByte(scanner.next());
 		//총점, 평균 계산
 		total=(short) (kor+eng+math);
