@@ -12,6 +12,10 @@ public class Ex04_03 {
 
 	public static void main(String[] args) {
 	      Scanner scanner = new Scanner(System.in);
+	      //scanner.useDelimiter(",");
+	      
+	      String pattern=",";
+	      scanner.useDelimiter(pattern);
 	      
 	      String name;
 	      int kor,eng,math;
