@@ -18,8 +18,8 @@ public class Ex11_03 {
       
       System.out.print("> 국어 점수(score) 입력 ? ");
        
-      if ( !scanner.hasNextInt() ) {
-         System.out.println("[알림] 점수 0~100 !!!"); 
+      if ( !scanner.hasNextInt() ) { //hasNextInt() 데이터 타입이 int인지 확인
+         System.out.println("[알림] 숫자를 입력해주세요"); 
          return ;
       }
       
@@ -31,7 +31,7 @@ public class Ex11_03 {
          else if (80<=score) grade = '우';
          else if (70<=score )grade = '미';
          else if (60<=score) grade = '양';
-         else grade = '가';
+         else grade = '가'; //기본값이 '가' 라서 없어도됨
          
          System.out.printf("%d점은 '%c'입니다.", score, grade);
       } else {
