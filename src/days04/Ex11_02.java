@@ -13,28 +13,67 @@ public class Ex11_02 {
 		//		0<=가<59
 		//출력형식)
 		//	95점은 '수'입니다.
-		Scanner scanner=new Scanner(System.in);
+//		Scanner scanner=new Scanner(System.in);
+//		int score;
+//		System.out.print("점수를 입력해주세요 : ");
+//		score=scanner.nextInt();
+//		
+//		
+//		if(score<0 || score>100) {
+//			System.out.print("범위를 벗어났습니다. 점수를 다시입력해주세요 : ");
+//			score=scanner.nextInt();
+//		}
+//		
+//		if(score>=90 && score<=100) {
+//			System.out.printf("%d점은 '수'입니다",score);
+//		}else if(score>=80 && score<=89) {
+//			System.out.printf("%d점은 '우'입니다",score);
+//		}else if(score>=70 && score<=79) {
+//			System.out.printf("%d점은 '미'입니다",score);
+//		}else if(score>=60 && score<=69) {
+//			System.out.printf("%d점은 '양'입니다",score);
+//		}else {
+//			System.out.printf("%d점은 '가'입니다",score);
+//		}
+		
+		
 		int score;
-		System.out.print("점수를 입력해주세요 : ");
-		score=scanner.nextInt();
-		
-		if(score<0 || score>100) {
-			System.out.print("범위를 벗어났습니다. 점수를 다시입력해주세요 : ");
-			score=scanner.nextInt();
-		}
-		
-		if(score>=90 && score<=100) {
-			System.out.printf("%d점은 '수'입니다",score);
-		}else if(score>=80 && score<=89) {
-			System.out.printf("%d점은 '우'입니다",score);
-		}else if(score>=70 && score<=79) {
-			System.out.printf("%d점은 '미'입니다",score);
-		}else if(score>=60 && score<=69) {
-			System.out.printf("%d점은 '양'입니다",score);
-		}else {
-			System.out.printf("%d점은 '가'입니다",score);
-		}
-			
-}
+	      
+	      @SuppressWarnings("resource")
+	      Scanner scanner = new Scanner(System.in);
+	      
+	      System.out.print("> 국어 점수(score) 입력 ? ");
+	      
+	      // if (  scanner.hasNextInt() == false) {
+	      if ( !scanner.hasNextInt() ) {
+	         System.out.println("[알림] 점수 0~100 !!!");
+	         // 프로그램 종료!!!
+	         return ;
+	      }
+	      
+	      score = scanner.nextInt();
+	      
+	      if ( 0<=score && score <=100) {
+	         // 수~가
+	         if (90<=score && score <=100) {
+	            System.out.printf("%d점은 '수'입니다.", score); 
+	         }
+	         if (80<=score && score <=89) {
+	            System.out.printf("%d점은 '우'입니다.", score); 
+	         }
+	         if (70<=score && score <=79) {
+	            System.out.printf("%d점은 '미'입니다.", score); 
+	         }
+	         if (60<=score && score <=69) {
+	            System.out.printf("%d점은 '양'입니다.", score); 
+	         }
+	         if (0<=score && score <=59) {
+	            System.out.printf("%d점은 '가'입니다.", score); 
+	         }
+	      } else {
+	         System.out.println("[알림] 점수 0~100 !!!");
+	      } 
 
-}
+	   }//main
+
+	}//class
