@@ -33,7 +33,7 @@ public class Ex06 {
 	      //  스택(Stack) 영역
 	      //  [ 100번지 ]
 	      //    kors
-	      int  kors[];
+	      int  kors[]; //배열생성
 	      
 	      // 동적(Heap) 영역
 	      //    0     1    2     3     4       899   index 첨자값
@@ -42,9 +42,9 @@ public class Ex06 {
 	       // [4int][4int][4int][4int][4int]..[4int]
 	      // 시작주소
 	      // 100번지104번지108번...
-	      kors = new int[900];
+	      kors = new int[900]; //배열크기 설정
 	      // kors = 100;  X
-	      kors[0] = 100;
+	      kors[0] = 100; // 배열 주소 지정 후 데이터 입력
 	      kors[1] = 90;
 	      System.out.println( kors[0]  );
 	      System.out.println( kors[1]  );
