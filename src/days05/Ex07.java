@@ -13,13 +13,20 @@ public class Ex07 {
 		//=0
 		int i=11;
 		int sum=0;
-		while(i<=10) {
+		
+		do {
 			System.out.printf("%d+",i);
 			sum+=i;
 			i++;
-		}
-		
-		System.out.printf("\b=%d",sum);
+		} while (i<=10);
+//		
+//		while(i<=10) {
+//			System.out.printf("%d+",i);
+//			sum+=i;
+//			i++;
+//		}
+//		
+//		System.out.printf("\b=%d",sum);
 	}
 
 }
