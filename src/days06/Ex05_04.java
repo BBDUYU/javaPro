@@ -19,6 +19,7 @@ public class Ex05_04 {
 	              .limit(20)
 	              .max();
 	      
-	      System.out.println( maxOptionInt.getAsInt() );	}//main
+	      System.out.println( maxOptionInt.getAsInt());	
+	      }//main
 
 }//class
