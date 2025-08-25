@@ -2,6 +2,20 @@ package days06;
 
 import java.util.Scanner;
 
+/**
+ * @author osj  
+ * @date 2025. 8. 25. 오전 11:43:49 
+ * @subject   가위(1), 바위(2), 보(3) 게임.
+ * @content 
+ * 
+ *		 // 게임 승자 판단 ~ 
+		/*                    컴퓨터 - 사용자 
+ *   사용자↖컴퓨터     가위(1)   바위(2)   보(3)
+ *   -------------------------------------
+ *   가위(1)     :     0      1(컴)    2(사)
+ *   바위(2)     :    -1(사)    0      1(컴)
+ *   보(3)      :    -2(컴)   -1(사)     0
+ * */
 public class Ex02_04 {
 
 	public static void main(String[] args) {
