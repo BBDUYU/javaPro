@@ -2,6 +2,7 @@ package days06;
 
 import java.util.Arrays;
 import java.util.Random;
+import java.util.stream.IntStream;
 
 public class Ex05_03 {
 
@@ -22,7 +23,10 @@ public class Ex05_03 {
 		}
 		
 		System.out.println(Arrays.toString(m));
-		//
+		//[2] int[] -> IntStream변환 : of()
+//		IntStream.of(m).max();
+		
+		//[1]
 		int max=m[0];
 		int min=m[0];
 		for(int i=0;i<m.length;i++) {
