@@ -29,7 +29,7 @@ public class Ex02_04 {
 		user = Integer.parseInt(input);		
 		
 		System.out.printf("> com=%s(%d), user=%s(%d)\n", rsp[com],com,rsp[user],user); 
-		//입력값은 1,2,3 하지만 배열값은 0,1,2 라서 배열에 빈값을 추가
+		//입력값은 1,2,3 하지만 배열값은 0,1,2 라서 배열에 빈값을 추가 0,1,2,3
 		switch (  com - user ) {
 		case 0:
 			System.out.println("무승부");
