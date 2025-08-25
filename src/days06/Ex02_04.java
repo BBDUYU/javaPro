@@ -10,7 +10,7 @@ public class Ex02_04 {
 		String input;	//입력값
 		Scanner scanner = new Scanner(System.in); //입력
 		String regex = "[1-3]"; //1~3의 수
-		String rsp[]={"가위","바위","보"}; 
+		String rsp[]={"","가위","바위","보"}; 
 		boolean is;	//
 		int tryCount=1; //입력횟수
 		do {
@@ -28,7 +28,8 @@ public class Ex02_04 {
 	
 		user = Integer.parseInt(input);		
 		
-		System.out.printf("> com=%s(%d), user=%s(%d)\n", rsp[com-1],com,rsp[user-1],user); //입력값은 1,2,3 하지만 배열값은 0,1,2
+		System.out.printf("> com=%s(%d), user=%s(%d)\n", rsp[com],com,rsp[user],user); 
+		//입력값은 1,2,3 하지만 배열값은 0,1,2 라서 배열에 빈값을 추가
 		switch (  com - user ) {
 		case 0:
 			System.out.println("무승부");
@@ -42,4 +43,5 @@ public class Ex02_04 {
 		}
 		//System.out.println("입력잘못!!");
 	}
+
 }
