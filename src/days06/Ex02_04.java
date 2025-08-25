@@ -13,18 +13,20 @@ public class Ex02_04 {
 		String rsp[]={"","가위","바위","보"}; 
 		boolean is;	//
 		int tryCount=1; //입력횟수
+		
+		
 		do {
 			System.out.printf("> [%d번째 입력] user 가위(1)/바위(2)/보(3) 선택 ? ",tryCount);
-			input = scanner.next();
-			tryCount++;
-			if(!(is=input.matches(regex))) System.out.println("잘못입력");
-			if(tryCount>3) {
+			input = scanner.next();//input값에 입력값 대입
+			tryCount++;//입력횟수 증가
+			if(!(is=input.matches(regex))) System.out.println("잘못입력");//regex와 다르면
+			if(tryCount>3) {//입력횟수가 3보다 커지면
 				System.out.println("입력 3회실패");
-				scanner.close();
-				return;
+				scanner.close();//
+				return;//프로그램 종료
 			}
 
-		} while (!is);
+		} while (!is);//regex와 다르면 반복
 	
 		user = Integer.parseInt(input);		
 		
