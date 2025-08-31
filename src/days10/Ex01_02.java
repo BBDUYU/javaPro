@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Iterator;
 
 /**
- * @author kenik  
+ * @author osj
  * @date 2025. 8. 29. 오전 10:42:30 
  * @subject   
  * @content 
