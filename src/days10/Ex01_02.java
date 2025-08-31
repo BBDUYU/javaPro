@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package days10;
 
 import java.util.Date;
