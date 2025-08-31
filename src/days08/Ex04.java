@@ -20,6 +20,9 @@ public class Ex04 {
 				System.out.println(i);
 			}
 		}
+		//문제 : 최대공약수, 최소공배수
+		//문제 : 소수
+		
 	}
 
 }
