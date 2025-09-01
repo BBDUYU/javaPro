@@ -34,6 +34,13 @@ public class Ex01 {
 				
 			-원격저장소 변경
 			git remote set-url origin https://<복사한 코드>@github.com/<유저네임>/<레포지토리 이름>
+			
+			-이클립스 실행 : java-project 생성 - studyPro
+			
+			- pull                                             -폴더명 없어도됨
+			git clone https://github.com/BBDUYU/javaPro_24.git JavaClass
+			
+			
 		 * */
 	}
 
