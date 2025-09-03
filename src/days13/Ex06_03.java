@@ -27,8 +27,8 @@ public class Ex06_03 {
 	      int fromIndex = 0;
 	      int index = -1;
 	      
-	      while ( (index = sequenceSearch(m, n, fromIndex) ) != -1 ) {
-	         System.out.println( index);
+	      while ((index = sequenceSearch(m, n, fromIndex)) != -1 ) {
+	         System.out.println(index);
 	         fromIndex = index + 1;
 	      }
 	      
