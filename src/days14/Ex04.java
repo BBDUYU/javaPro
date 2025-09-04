@@ -26,6 +26,9 @@ public class Ex04 {
 		System.out.println(myCar.name);
 		System.out.println(myCar.speed);
 		System.out.println(myCar.wheelCount);
+		
+		//객체명.메서드명();
+		myCar.dispCarInfo();
 	}
 
 }

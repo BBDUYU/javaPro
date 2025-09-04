@@ -9,6 +9,7 @@ public class Car {
 	String name; //자동차 이름
 	int speed;//속도
 	int wheelCount;//바퀴수
+	//초기화를 하지않아도 기본값으로 설정
 	//기능=멤버함수=메서드
 	public void dispCarInfo() {
 		System.out.printf("이름:%s, 속도:%d",name,speed);

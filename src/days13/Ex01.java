@@ -2,11 +2,14 @@ package days13;
 
 import java.util.Scanner;
 
+import days14.Person;
+
 public class Ex01 {
 
 	public static void main(String[] args) {
 		//1차원배열선언-이름,국,영,수,총합,평균,등수 처리입력+등수처리+출력
 		//학생 성적 처리 10명
+		/*
 		int STUDENT_COUNT=10; //고정값 final 추가 권장
 		
 		//배열변수
@@ -47,7 +50,12 @@ public class Ex01 {
 			count++;
 		} while (count<10);
 		
+		*/
 		
+		//days14 Person 클래스
+		//days13.Ex01 클래스
+		Person p1=new Person();
+		System.out.println("public");
 		
 		
 	}
