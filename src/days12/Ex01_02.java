@@ -5,7 +5,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 /**
- * @author kenik  
+ * @author osj  
  * @date 2025. 9. 2. 오전 7:16:26 
  * @subject  30명 학생의 이름,국,영,수,총,평, 등 저장/출력
  * @content  배열  X
