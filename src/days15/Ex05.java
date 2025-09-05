@@ -41,10 +41,14 @@ public class Ex05 {
 		//p1.dispPoint();
 		//p2.dispPoint();
 		
+		/*
 		p1.dispPoint();
 		p1.plusPoint(p2);
 		p1.dispPoint();
 		
+		int p1X=p1.getX();
+		System.out.println(p1X);
+		*/
 	}
 
 }
