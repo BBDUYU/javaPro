@@ -32,15 +32,17 @@ public class Ex05 {
 		p1=new Point();//인스턴스화,객체생성
 		//객체명.필드명
 		p1.x=10;
+		p1.y=1;
 		//객체명.메서드명();
 		Point p2=new Point();
 		p2.x=20;
+		p2.y=2;
 		
 		//p1.dispPoint();
 		//p2.dispPoint();
 		
 		p1.dispPoint();
-		p1.offsetPoint(5);
+		p1.plusPoint(p2);
 		p1.dispPoint();
 		
 	}

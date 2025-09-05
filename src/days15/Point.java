@@ -14,6 +14,10 @@ public class Point {
 	public void offsetPoint(int n) { 
 		x+=n;
 		y+=n;
-		
+	}
+	
+	public void plusPoint(Point p) {
+		x+=p.x;
+		y+=p.y;
 	}
 }
