@@ -21,6 +21,29 @@ public class Ex10 {
 		 *   2) 생성자 초기화
 		 *   3) 초기화 블럭 사용.
 		 * */ 
+
+		Member m1=new Member();
+		System.out.println( m1.name );
+		System.out.println( m1.age );
+
+	}
+
+}
+
+class Member{
+	//필드
+	//1) 인스턴스변수
+	String name="익명"; //명시적 초기화
+	int age=20;	//명시적 초기화
+	int count;
+	int serialNumber;
+	//2) 클래스변수, static변수, 정적변수, 공유변수
+	static double rate;
+	// 생성자 초기화
+
+	Member(){
+		name = "홍길동";
+		age = 10;
 	}
 
 }
