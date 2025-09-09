@@ -22,6 +22,10 @@ public class Temp extends Employee{
 	public int getPay() {
 		return this.days*this.payOfDay;
 	}
-	
+	@Override
+	public void dispEmpInfo() {
+		super.dispEmpInfo();// Employee.java에 있는  dispEmpInfo
+		System.out.printf("근무일수:%d, 하루일당:%d\n", this.days, this.payOfDay);//추가할내용
+	}
 	
 }

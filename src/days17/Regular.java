@@ -36,6 +36,12 @@ public class Regular extends Employee{
 	public int getPay() {
 		return this.basePay;
 	}
+
+	@Override
+	public void dispEmpInfo() {
+		super.dispEmpInfo();// Employee.java에 있는  dispEmpInfo
+		System.out.printf("급여:%,d원\n", this.basePay);//추가할내용
+	}
 	
 	
 	
