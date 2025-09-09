@@ -20,7 +20,7 @@ public class Ex07 {
 		//NewTypeEmp emp5=new NewTypeEmp();
 		//dispTest(emp5);
 	}
-	private static void dispTest(Employee emp) {
+	private static void dispTest(Employee emp) { //매개변수 다형성
 		emp.dispEmpInfo();
 	}
 	/*

@@ -20,6 +20,9 @@ class Shape{ //extends Object <- 최상위 클래스
 	public void draw() {
 		System.out.printf("[color=%s]\n",this.color);
 	}
+	public void 도형면적메서드() {
+
+	}
 }
 /*
 class Circle{
@@ -55,6 +58,11 @@ class Circle extends Shape{
 		this.center=center;
 		this.r=r;
 	}
+	
+	@Override
+    public void 도형면적메서드() {
+      System.out.println("> 원 면적 계산 : 반지름 * 반지름 * 3.14");
+   }
 	//부모로부터 상속된 draw() 메서드 : [color=%s]
 	//원점, 반지름 출력(draw)
 	// 1) 부모로부터 상속받은 draw() 메서드를 코딩수정 - 오버라이딩
@@ -64,11 +72,15 @@ class Circle extends Shape{
 class Triangle extends Shape{
 	//꼭짓점 3개
 	Point2D pArr[]=new Point2D[3];
-	
+
 	public Triangle() {
-		
+
 	}
-	
+	@Override
+    public void 도형면적메서드() {
+      System.out.println("> 삼각형 면적 계산 : 가로 * 세로 * 1/2");
+   }
+
 }
 
 
