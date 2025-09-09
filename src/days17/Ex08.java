@@ -13,6 +13,9 @@ public class Ex08 {
 		//자동 업캐스팅
 		Parent2 p = new Child2(); //부모 객체에 자식 업캐스팅
 		p.disp(); //부모 객체 호출했지만
+		
+		//다운캐스팅은 강제형변환이 필요 자동X
+		Child2 c=(Child2)p;
 	}
 
 }
