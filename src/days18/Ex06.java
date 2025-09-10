@@ -38,7 +38,10 @@ abstract class Player{
 
  //The type AudioPlayer must implement the inherited abstract method Player.stop()
 //The type AudioPlayer must implement the inherited abstract method Player.play(int)
+
 //추상메서드를 가진 부모클래스를 상속받으면 자식클래스도 추상클래스 -> abstract 추가
+//abstract를 추가하지 않으려면 @Override 오버라이딩 추가
+
 abstract class AudioPlayer extends Player{
 
 	@Override
