@@ -9,9 +9,7 @@ package days19;
 public class Ex05 {
 
 	public static void main(String[] args) {
-		int i = Integer.MAX_VALUE;
-        int j = i + 100;
-        System.out.println( j ); // -2147483549       
+		
 	}
 
 }
@@ -36,4 +34,34 @@ public class Ex05 {
            int i = Integer.MAX_VALUE;
          int j = i + 100;
          System.out.println( j ); // -2147483549           
+ * 
+ * 예외가 발생하면
+ * JVM 안에 예외처리기가 발생한 예외의 예외객체를 생성해서
+ * 개발자에게 예외를 처리하도록 전달
+ * 
+ * 예외처리
+ * - 프로그램 실행 시 발생할 수 있는 예기치 못한 예외의 대비한 코드를 작성하는것 
+ * 							
+ * 
+ * 예외 처리 방법
+ * 1. try catch		예외 직접 처리
+ * 2. throws		예외떠넘기기
+ * 
  * */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
