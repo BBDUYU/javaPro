@@ -15,7 +15,7 @@ public class Ex12 {
 		
 		
 		Engine engine = new S_Engine() ; // new H_Engine();
-		Car myCar = new Car(engine);
+		Car myCar = new Car(engine); 
 		myCar.speedUp(1000);
 		// myCar.getEngine().speed;
 		
