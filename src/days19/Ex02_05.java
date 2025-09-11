@@ -1,10 +1,11 @@
 package days19;
-
+ 
 public class Ex02_05 {
 
 	public static void main(String[] args) {
 		Outer2 out=new Outer2();
-		Outer2.InstanceInner iiObj=outer.new InstanceInner();
+		Outer2.InstanceInner iiObj=out.new InstanceInner();//?
+		
 		iiObj.a=200;
 		System.out.println(iiObj.a);
 		
