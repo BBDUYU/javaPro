@@ -1,5 +1,8 @@
 package days24;
 
+import java.util.SortedSet;
+import java.util.TreeSet;
+
 /**
  * @author Osj  
  * @date   2025. 9. 18. 오후 3:31:14
@@ -28,8 +31,54 @@ public class Ex08 {
 		 * 6. 이직 검색 트리 구조 설명
 		 * 		- 부모노드의 왼쪽에는 부모노드 값보다 작은 값의 자식노드가 배치되고
 		 * 		  		  오른쪽에는 	//	    큰 값의 자식노드가 배치
-		 * 		
-		 * */
+		 * 
+		 * 
+		 * 
+		 * 
+		 * 						[0x100][7][null]
+		 * 						/			\	
+		 * 					   /			 \
+		 * 		[0x200][4][null] 			[0x200][9][null] 
+		 *       0x100/ 	\				0x300
+		 * [null][1][null]  [null][5][0x500] 
+		 * 0x200                0x400\
+		 * 							[null][6][null] 
+		 *							0x500
+		 * 
+		 * */						
+
+		TreeSet<Integer> ts=new TreeSet<Integer>();
+		ts.add(7);
+		ts.add(4);
+		ts.add(1);
+		ts.add(9);
+		ts.add(5);
+		ts.add(6);
+		
+		System.out.println(ts);
+		System.out.println(ts.add(5));//false
+		
+		System.out.println(ts.first());
+		System.out.println(ts.last());
+		
+		System.out.println(ts.higher(1)); //n보다 큰값중에 가까운값
+		System.out.println(ts.lower(1)); //n보다 작은값중에 가까운값
+		
+		System.out.println(ts.floor(3)); //지정된 객체와 같은객체를 반환 없으면 작은객체중 제일 가까운객체
+		System.out.println(ts.ceiling(3)); //지정된 객체와 같은객체반환, 없으면 큰값을 가진 객체중 제일 가까운 객체
+		
+		SortedSet<Integer> ss = ts.subSet(4, 7);
+		System.out.println(ss);
+		
+		
+		
+		
+	
+		
+		
+		
+		
+		
 	}
 
 }
