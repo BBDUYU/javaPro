@@ -47,6 +47,14 @@ public class Ex09 {
 		hm.remove("hong");
 		System.out.println(hm);
 		
+		String key="admin";
+		String value=hm.get(key);
+		System.out.println(value);
+		
+		key="abc";
+//		value=hm.get(key);
+		value=hm.getOrDefault(key, "무명");
+		System.out.println(value);
 		
 		
 		
