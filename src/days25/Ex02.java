@@ -69,9 +69,9 @@ public class Ex02 {
 		System.out.println("end");
 	}
 
-	private static void dispTemp(Map<String, ArrayList<String>> hm) {
-		Set<Entry<String, ArrayList<String>>> es=hm.entrySet();
-		Iterator<Entry<String, ArrayList<String>>> ir=es.iterator();
+	private static void dispTemp(Map<String, ArrayList<String>> hm) {//엔트리 출력 메서드
+		Set<Entry<String, ArrayList<String>>> es=hm.entrySet();//엔트리 es 생성
+		Iterator<Entry<String, ArrayList<String>>> ir=es.iterator();//엔트리 순회 ir 생성
 		while (ir.hasNext()) {
 			Entry<String, ArrayList<String>>entry=ir.next();//hm 엔트리
 			String key=entry.getKey();	//hm엔트리의 key호출 및 설정
