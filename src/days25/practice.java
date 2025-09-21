@@ -19,7 +19,6 @@ public class practice {
 			String line=null;
 			String key=null;
 			ArrayList<String> teamList=null;
-
 			while ((line=br.readLine())!=null) {
 				String regex="[:/]";
 				String teamInfo[]=line.split(regex);
@@ -39,25 +38,20 @@ public class practice {
 	private static void disp(Map<String, ArrayList<String>> m) {
 		Set<Entry<String, ArrayList<String>>> se=m.entrySet();
 		Iterator<Entry<String, ArrayList<String>>>it=se.iterator();
-		
 		while (it.hasNext()) {
-			Entry<String, ArrayList<String>> es=it.next();
-			String key=es.getKey();
+			Entry<String, ArrayList<String>> entry= it.next();
+			String key = entry.getKey();
 			System.out.printf("[%s]\n",key);
-			ArrayList<String> teamList= es.getValue();
+			ArrayList<String> teamList=entry.getValue();
 			Iterator<String> it2 = teamList.iterator();
-			char no='A';
+			char no = 'A';
 			while (it2.hasNext()) {
 				String name=it2.next();
 				System.out.printf("\t%c. %s\n",no++,name);
 			}
 		}
+		
 	}
-	
-
-
-
-
 
 
 
