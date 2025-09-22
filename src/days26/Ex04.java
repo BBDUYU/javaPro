@@ -4,7 +4,7 @@ package days26;
  * @author Osj  
  * @date   2025. 9. 22. 오후 12:31:09
  * @subject 
- * @content 
+ * @content IO
  */
 public class Ex04 {
 
