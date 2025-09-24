@@ -1,5 +1,6 @@
 package Tennis;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -29,7 +30,6 @@ public class Main {
 
 
 	public static void dispMemList() { // 선수 리스트 출력
-
 		String fileName = ".\\src\\Tennis\\선수명단.txt";
 		String players[][] = FileRead.readPlayerList(fileName);
 		if (players != null) {
@@ -50,7 +50,10 @@ public class Main {
 		String selectedPlayers[]=SelectMem.dispSelectMem(gameType, players);
 		String team1Players=selectedPlayers[0];
 		String team2Players=selectedPlayers[1];
-		
+//		String teamList=Arrays.toString(selectedPlayers);
+		System.out.println("\tA팀 : "+team1Players);
+		System.out.println("\tB팀 : "+team2Players);
+
 	}
 	
 }
