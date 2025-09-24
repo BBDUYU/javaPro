@@ -30,11 +30,11 @@ public class SelectMem {
 
 		} else {
 			// 복식: 팀별 2명씩 입력, 각 선수 체크
-			System.out.println("> 복식 팀1 선수 2명 입력 : ");
+			System.out.print("> 복식 팀1 선수 2명 입력 : ");
 			team1Players = sc.nextLine();
 			while (!typeTwoInList(team1Players, players)) {
 				System.out.println("명단에 없는 선수가 포함되어 있습니다. 다시 입력하세요.");
-				System.out.println("> 복식 팀1 선수 2명 입력 : ");
+				System.out.print("> 복식 팀1 선수 2명 입력 : ");
 				team1Players = sc.nextLine();
 			}
 
@@ -42,7 +42,7 @@ public class SelectMem {
 			team2Players = sc.nextLine();
 			while (!typeTwoInList(team2Players, players)) {
 				System.out.println("명단에 없는 선수가 포함되어 있습니다. 다시 입력하세요.");
-				System.out.println("> 복식 팀2 선수 2명 입력 : ");
+				System.out.print("> 복식 팀2 선수 2명 입력 : ");
 				team2Players = sc.nextLine();
 			}
 		}
