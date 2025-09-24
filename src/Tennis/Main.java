@@ -23,6 +23,7 @@ public class Main {
 
 		dispMemList();
 		dispPlayerList(gameType);
+		//dispGame();
 	}
 
 
