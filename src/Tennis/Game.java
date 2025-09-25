@@ -120,9 +120,8 @@ public class Game {
 		System.out.printf("총 세트 수 : %d, 현재 세트 : %d\n",totalSet,currentSet+1);
 		System.out.printf("%s 세트 승리 : %d, %s 세트 승리 : %d\n", player1, player1SetWin, player2, player2SetWin);
 		for (int i = 0; i <= currentSet &&i<totalSet; i++) {//0~현재세트보다 작거나 같을때 && 0~총세트수
-							//왜 i <= currentSet 이걸 추가해야하는지는 모르겠음...
-							// 총세트수 만큼 돌리니까 오류남
-			
+							// totalSet만 넣으면 오류
+							// currentSet을 넣어야 현재것만 출력 
 			if (gamesWin[i][0] != 0 || gamesWin[i][1] != 0) { //각 팀 점수가 0이 아닐때 출력
 		        System.out.printf("세트 %d - %s: %d, %s: %d\n", i + 1, player1, gamesWin[i][0], player2, gamesWin[i][1]);
 		    }
