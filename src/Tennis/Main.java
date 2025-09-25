@@ -22,8 +22,10 @@ public class Main {
 		}
 
 		dispMemList();
-		dispPlayerList(gameType);
-		//dispGame();
+		String selectedPlayer[] =  dispPlayerList(gameType);
+		String team1Players=selectedPlayer[0];
+		String team2Players=selectedPlayer[1];
+		
 	}
 
 
@@ -44,16 +46,18 @@ public class Main {
 		}
 	}
 	
-	private static void dispPlayerList(int gameType) { // 선택된 선수 리스트
+	private static String[] dispPlayerList(int gameType) { // 선택된 선수 리스트
 		String fileName = ".\\src\\Tennis\\선수명단.txt";
-		String players[][]=FileRead.readPlayerList(fileName);
-		
+		String players[][]=FileRead.readPlayerList(fileName);		
 		String selectedPlayers[]=SelectMem.dispSelectMem(gameType, players);
-		String team1Players=selectedPlayers[0];
-		String team2Players=selectedPlayers[1];
+		
+		
+		
 //		String teamList=Arrays.toString(selectedPlayers);
-		System.out.println("\tA팀 : "+team1Players);
-		System.out.println("\tB팀 : "+team2Players);
+		System.out.println("\tA팀 : "+selectedPlayers[0]);
+		System.out.println("\tB팀 : "+selectedPlayers[1]);
+
+        return selectedPlayers;
 
 	}
 	
