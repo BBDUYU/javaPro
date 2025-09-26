@@ -28,11 +28,11 @@ public class Game {
 		this.currentSet=0;
 	}
 	
-	public void pointWinner(int p) {
-		if (p == 1) player1Score();
-		else if (p == 2) player2Score();
-	}
-	public void player1Score() {//p1 점수 계산
+	public void pointWinner(int p) { //[33] p1, p2에따라 점수계산*********
+		if (p == 1) player1Score();//[34] p1점수계산, 35줄 player1Score() 호출*********
+		else if (p == 2) player2Score();//[36] p2점수계산 , 62줄 player2Score()호출******
+	}//Main.java dispGame()으로 돌아가서 진행
+	public void player1Score() {//[35]p1 점수 계산
 		if(isDuce) { //듀스인가?
 			if(advantagePlayer==1) { //p1이 어드밴티지면?
 				gameWin(1);//p1이 이김
@@ -58,8 +58,8 @@ public class Game {
 				}
 			}
 		}
-	}
-	public void player2Score() {//p2 점수 계산
+	}//32줄 [34]로 돌아감
+	public void player2Score() {//[37]p2 점수 계산*********
 		if(isDuce) { //듀스인가?
 			if(advantagePlayer==2) {//p2가 어드밴티지면
 				gameWin(2);//p2가 이김
@@ -85,7 +85,7 @@ public class Game {
 				}
 			}
 		}
-	}
+	}//33줄 [36]으로 돌아감
 
 	private void gameWin(int player) {//승리시
 		if(player==1) gamesWin[currentSet][0]++;//p1이면 gamesWin[][player1] 에 +1
@@ -115,7 +115,7 @@ public class Game {
 		isDuce=false;
 		advantagePlayer=0;
 	}
-	public void dispScoreBoard() { //점수판 표기
+	public void dispScoreBoard() { //[31] 점수판 표기*********
 		System.out.println("=".repeat(11)+"스코어보드"+"=".repeat(11));
 		System.out.printf("총 세트 수 : %d, 현재 세트 : %d\n",totalSet,currentSet+1);
 		System.out.printf("%s 세트 승리 : %d, %s 세트 승리 : %d\n", player1, player1SetWin, player2, player2SetWin);
@@ -146,16 +146,17 @@ public class Game {
 		}
 		
 		System.out.println("=".repeat(29));
-	}
-	public String getWinner() {
+	}//Main.java 41줄 [30]으로 이동*********
+	public String getWinner() {//[39]승자 판단*********
 		// 3판 2선승 또는 5판 3선승
-		int setsToWin = totalSet / 2 + 1; //총세트/2 +1 ->
-										  // 3/2 + 1 = 2 || 5/2 + 1 = 3
-										  // 3판       2선    5판       3선
+		int setsToWin = totalSet / 2 + 1; 
+		//					총세트/2 +1
+		// 3/2 + 1 = 2 || 5/2 + 1 = 3
+		// 3판       2선    5판       3선
 		if (player1SetWin == setsToWin) return player1; 
 		if (player2SetWin == setsToWin) return player2;
 		return null;
-	}
+	}//Main.java [38]로 돌아감********
 
 	
 	

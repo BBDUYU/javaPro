@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileRead {
-	public static String[][] readPlayerList(String fileName) {
+	public static String[][] readPlayerList(String fileName) {//[6], [12]
 		List<String> lines = new ArrayList<>();//수정용이
 		String line = null;
 		try (FileReader fr = new FileReader(fileName); 
@@ -20,13 +20,15 @@ public class FileRead {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		int numRows = (lines.size() + 1) / 2; //행 구하는 식
-		String nameArr[][] = new String[numRows][2];//list사이즈에 맞게 행 크기 조정
-
+		int numRows = (lines.size() + 1) / 2; //행 구하는 식 
+											  //선수가 추가될 수 있으니까
+		String nameArr[][] = new String[numRows][2];
+									//list 사이즈에 맞게 배열 크기 할당
 		for (int i = 0; i < lines.size(); i++) {
-			nameArr[i / 2][i % 2] = lines.get(i);//해당배열에 list값 대입
+			nameArr[i / 2][i % 2] = lines.get(i);
+			//해당배열에 list에 존재하는 value 대입
 		}
-		return nameArr;
+		return nameArr;// [7] Main.java 54줄로 이동 [13] Main.java 68번줄로 이동
 	}
 
 }

@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class SelectMem {
 
-	public static String[] dispSelectMem(int gameType, String[][] players) {
+	public static String[] dispSelectMem(int gameType, String[][] players) {//[16]*********
 		Scanner sc = new Scanner(System.in);
 		String team1Players = ""; 
 		String team2Players = "";
@@ -19,7 +19,7 @@ public class SelectMem {
 			// 단식 : 한 명씩 입력 + 존재 여부 체크 반복
 			System.out.print("> 단식 1번 선수 이름 입력 : ");
 			team1Players = sc.nextLine();
-			while (!typeOneInList(team1Players, players)) {
+			while (!typeOneInList(team1Players, players)) { //[17] 125 줄 typeOneInList 호출***********
 				System.out.println("명단에 없는 선수입니다. 다시 입력하세요.");
 				System.out.print("> 단식 1번 선수 이름 입력 : ");
 				team1Players = sc.nextLine();
@@ -28,6 +28,7 @@ public class SelectMem {
 
 			System.out.print("> 단식 2번 선수 이름 입력 : ");
 			team2Players = sc.nextLine();
+			//[19]32줄~33줄 while문 -> 125줄 typeOneInList 호출**********
 			while (!typeOneInList(team2Players, players) || selectedPlayerList.contains(team2Players)) {
 				if (!typeOneInList(team2Players, players)) {
 					System.out.println("명단에 없는 선수입니다. 다시 입력하세요.");
@@ -44,6 +45,7 @@ public class SelectMem {
 			team1Players = sc.nextLine();
 			// 팀1 선수들이 유효할 때까지 반복
 			while (!validateDoublesPlayers(team1Players, players, selectedPlayerList)) {
+				//[21] 79줄 validateDoublesPlayers 호출******
 				//System.out.println("명단에 없는 선수가 포함되어 있습니다. 다시 입력하세요.");
 				System.out.print("> 복식 팀1 선수 2명 다시 입력 : ");
 				team1Players = sc.nextLine();
@@ -58,23 +60,24 @@ public class SelectMem {
 			team2Players = sc.nextLine();
 			// 팀2 선수들이 유효할 때까지 반복
 			while (!validateDoublesPlayers(team2Players, players, selectedPlayerList)) {
+				//[23] 79줄 validateDoublesPlayers 호출*********
 				//System.out.println("명단에 없는 선수가 포함되어 있습니다. 다시 입력하세요.");
 				System.out.print("> 복식 팀2 선수 2명 다시 입력 : ");
 				team2Players = sc.nextLine();
 			}
 		}
 
-		String selectedPlayers[]=new String[2];
+		String selectedPlayers[]=new String[2]; //selectedPlayers 배열생성
 
-		selectedPlayers[0]=team1Players;
-		selectedPlayers[1]=team2Players;
+		selectedPlayers[0]=team1Players; //1팀 선수 배열 0자리에 대입
+		selectedPlayers[1]=team2Players; //2팀 선수 배열 1자리에 대입
 
-		return selectedPlayers;
+		return selectedPlayers; //[25] Main.java로 리턴**********
 
 	}
 
 	private static boolean validateDoublesPlayers(String inputNames, String[][] allPlayers
-			,List<String> selectedPlayers) {
+			,List<String> selectedPlayers) {//****[22], [24] 선수 중복검사 및 존재유무 검사****
 		String names[] = inputNames.split("\\s"); // return될 선택된 선수들 list
 
         // 1. 선수를 2명 입력했는지 확인
@@ -105,7 +108,7 @@ public class SelectMem {
 
         // 모든 검사를 통과한 경우
         return true;
-    }
+    }//48줄 [21], [23]로 돌아가 진행***********
 /*
 	private static boolean typeTwoInList(String team1Players, String[][] players) {
 		String names[]=team1Players.split("\\s");
@@ -119,7 +122,7 @@ public class SelectMem {
 
 	}
 */
-	private static boolean typeOneInList(String team1Players, String[][] players) { //리스트에 존재 유무
+	private static boolean typeOneInList(String team1Players, String[][] players) { //[18],[20]리스트에 존재 유무**********
 		for (String row[]:players) { // 2차원 배열인 players를 1차원 배열 row[]를 만들고 한줄씩 불러오고
 			for(String name : row) { // 한줄씩 꺼내온 row에 있는 값을 name으로 이름짓고 한개씩 불러옴
 				
@@ -141,4 +144,4 @@ public class SelectMem {
 		return false;
 	}
 
-}
+}//22줄 [17],31줄 [19]로 돌아가 다시 진행**********
