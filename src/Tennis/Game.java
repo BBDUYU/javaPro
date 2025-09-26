@@ -116,15 +116,15 @@ public class Game {
 		advantagePlayer=0;
 	}
 	public void dispScoreBoard() { //[31] 점수판 표기*********
+		//마지막 결과나올때 승리점수를 처리하면서 현재세트가 총 세트수보다 많아져버림 -> 101줄 -> 그래서 승리자가 비어있지않을때 current -1
+		int dispSet=getWinner()!=null?currentSet-1:currentSet; 
 		System.out.println("=".repeat(11)+"스코어보드"+"=".repeat(11));
-		System.out.printf("총 세트 수 : %d, 현재 세트 : %d\n",totalSet,currentSet+1);
+		System.out.printf("총 세트 수 : %d, 현재 세트 : %d\n",totalSet,dispSet+1);
 		System.out.printf("%s 세트 승리 : %d, %s 세트 승리 : %d\n", player1, player1SetWin, player2, player2SetWin);
-		for (int i = 0; i <= currentSet &&i<totalSet; i++) {//0~현재세트보다 작거나 같을때 && 0~총세트수
+		for (int i = 0; i <= dispSet &&i<totalSet; i++) {//0~현재세트보다 작거나 같을때 && 0~총세트수
 							// totalSet만 넣으면 오류
 							// currentSet을 넣어야 현재것만 출력 
-			if (gamesWin[i][0] != 0 || gamesWin[i][1] != 0) { //각 팀 점수가 0이 아닐때 출력
 		        System.out.printf("세트 %d - %s: %d, %s: %d\n", i + 1, player1, gamesWin[i][0], player2, gamesWin[i][1]);
-		    }
 		}//매판 마다 현재 세트, 팀별 점수 출력
 		System.out.print("현재 게임 점수 : ");
 		String advantagePoint="Ad"; //어드밴티지 점수표시
