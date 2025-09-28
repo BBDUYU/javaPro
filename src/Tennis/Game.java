@@ -98,7 +98,13 @@ public class Game {
 			// gamesWin[][];//[1세트][p1], [2세트][p2]...
 			if(gamesWin[currentSet][0]>gamesWin[currentSet][1]) player1SetWin++; //현재 세트에 p1 점수가 더 크면 
 			else player2SetWin++;//p2 점수가 더 크면
-			currentSet++; //승리점수 처리후 현재세트 +1
+			if (getWinner() == null) {
+				// 매치가 끝나지 않았으면 다음 세트로 진행
+				// (currentSet은 0-based이므로 최대 totalSet-1까지 허용)
+				if (currentSet < totalSet - 1) {
+					currentSet++;
+				}
+			}
 		}
 	}
 
@@ -116,12 +122,10 @@ public class Game {
 		advantagePlayer=0;
 	}
 	public void dispScoreBoard() { //[31] 점수판 표기*********
-		//마지막 결과나올때 승리점수를 처리하면서 현재세트가 총 세트수보다 많아져버림 -> 101줄 -> 그래서 승리자가 비어있지않을때 current -1
-		int dispSet=getWinner()!=null?currentSet-1:currentSet; 
 		System.out.println("=".repeat(11)+"스코어보드"+"=".repeat(11));
-		System.out.printf("총 세트 수 : %d, 현재 세트 : %d\n",totalSet,dispSet+1);
+		System.out.printf("총 세트 수 : %d, 현재 세트 : %d\n",totalSet,currentSet+1);
 		System.out.printf("%s 세트 승리 : %d, %s 세트 승리 : %d\n", player1, player1SetWin, player2, player2SetWin);
-		for (int i = 0; i <= dispSet &&i<totalSet; i++) {//0~현재세트보다 작거나 같을때 && 0~총세트수
+		for (int i = 0; i <= currentSet &&i<totalSet; i++) {//0~현재세트보다 작거나 같을때 && 0~총세트수
 							// totalSet만 넣으면 오류
 							// currentSet을 넣어야 현재것만 출력 
 		        System.out.printf("세트 %d - %s: %d, %s: %d\n", i + 1, player1, gamesWin[i][0], player2, gamesWin[i][1]);
